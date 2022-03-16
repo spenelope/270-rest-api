@@ -30,11 +30,12 @@ app.post('/login',(req,res) => {
     console.log(JSON.stringify(req.body));
     if (invalidLoginAttempts>=5){
         res.status(401);//unauthorized
+        res.send("Max attempts reach");
     }
     // console.log("Here is the password " + req.body.password)
     // let password = md5(req.body.password) 
 
-    if (req.body.userName ==="spenelope" && password ==="161ebd7d45089b3446ee4e0d86dbcf92"){
+    else if (req.body.userName ==="spenelope" && password ==="161ebd7d45089b3446ee4e0d86dbcf92"){
         res.send("Welcome!")
     }
     else{
