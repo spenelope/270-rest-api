@@ -41,7 +41,7 @@ function checkexpiredtoken(token){
         url: '/validate/'+token,
         data: JSON.stringify({usertoken}),
         success: function(data){savetoken(data)},
-        contentType: "application/text",
+        contentType: "application/json",
         dataType: 'text' })
     }
 }
