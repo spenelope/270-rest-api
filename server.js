@@ -6,7 +6,7 @@ const app = express();
 const fs = require('fs')
 const https = require('https')
 
-let loginAttempts=0;
+let invalidLoginAttempts=0;
 
 
 
@@ -35,7 +35,7 @@ app.post('/login',(req,res) => {
     // console.log("Here is the password " + req.body.password)
     // let password = md5(req.body.password) 
 
-    else if (req.body.userName ==="spenelope" && password ==="161ebd7d45089b3446ee4e0d86dbcf92"){
+    else if (req.body.userName ==="penelopesanchez" && md5(req.body.password) ==="161ebd7d45089b3446ee4e0d86dbcf92"){
         res.send("Welcome!")
     }
     else{
